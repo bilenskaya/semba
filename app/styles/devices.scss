@@ -1,0 +1,17 @@
+$devicesPath:   "../font" !default;
+
+@font-face {
+  font-family: 'Devices';
+  src: url('#{$devicesPath}/devices.woff?v=3.0.1') format("woff");
+}
+
+.devices {
+	width:                 63px;
+	display:               inline-block;
+	font-family:           Devices;
+	font-weight:           normal;
+  font-style:            normal;
+  text-decoration:       inherit;
+  text-align:            center;
+  -webkit-font-smoothing: antialiased;
+}

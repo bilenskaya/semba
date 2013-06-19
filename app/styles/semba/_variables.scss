@@ -1,0 +1,105 @@
+@import "susy";
+
+/* Units /* Colors ======================================================================================*/
+
+/* $base-font-size:                 default fon size
+*  $total-columns:                  default number of columns for (mobile phones)
+*  $column-width:                   width of each column
+*  $gutter-width:                   space between columns
+*  $grid-padding:                   space on the right and left of the grid
+*/
+$base-font-size:                    10px;
+$total-columns:                     4;
+$column-width:                      3rem;
+$gutter-width:                      2rem;
+$grid-padding:                      $gutter-width;
+
+$base-unit:                         $base-font-size;
+$margin:                            $gutter-width;
+$padding:                           $gutter-width;
+$margin-1t:                         $margin / 3;  
+$margin-2t:                         $margin-1t * 2;
+$padding-1t:                        $margin-1t;
+$padding-2t:                        $margin-2t;
+
+/* $phone-landscape:                alternative layout breakpoints for mobile phones with orientation landscape
+*  $tablet-portrait:                alternative layout breakpoints for tablets with orientation portrait
+*  $tablet-landscape:               alternative layout breakpoints for tablets with orientation landscape
+*  $desktop:                        alternative layout breakpoints for desktops
+*/
+$phone-landscape:                   32.5rem 4;
+$tablet-portrait:                   54rem 6;
+$tablet-landscape: 	                81rem 8;
+$desktop:                           128.5rem 12;
+
+//z-index units
+$menu-bar-z-index:                  99;
+$view-z-index:                      1;
+$menu-z-index:                      1;
+$content-z-index:                   1;
+$navigation-z-index:                0;
+
+//container units
+$container-width:                   100%;
+$container-height:                  100%;
+
+//animation transition units
+$animation-transition:              0.5s;
+
+//meun bar units
+$menu-bar-height:                   6rem;
+$menu-bar-width:                    $container-width;
+$menu-button-height:                $menu-bar-height;
+$menu-button-width:                 $menu-bar-height;
+
+
+//menu units
+$menu-height:                       20rem;
+$menu-hidden:                       - ($menu-height + $menu-bar-height);
+$menu-width:                        100%;
+
+
+//navigation units
+$navigation-width:                  25.9rem;
+$navigation-width-phone-landscape:  30rem;
+$navigation-width-tablet-portrait:  42.9rem;
+$navigation-width-tablet-landscape: 33.4rem;
+$navigation-width-desktop:          42.2rem;
+
+/* Colors ======================================================================================*/
+
+$primary-color:                     #ffb163;
+$primary-highlight-color:           #ff8a63;
+// $secondary-color:                #333;
+// $secondary-highlight-color:      #555;
+// $tertiary-higlight-color:        #ddd;
+// $tertiary-color:                 #eee;
+
+// Grays
+$black:                             #000 !default;
+$gray-darker:                       #222 !default;
+$gray-dark:                         #333 !default;
+$gray:                              #555 !default;
+$gray-light:                        #999 !default;
+$gray-lighter:                      #eee !default;
+$white:                             #fff !default;
+
+
+//bacground colors
+$background-color:                  $gray-lighter;
+
+//menu bar colors
+$menu-bar-color:                    $gray-dark;
+$menu-bar-border-color:             $gray-darker;
+$menu-bar-button-color:             $gray-dark;
+$menu-bar-text-color:               $white;
+
+//menu colors
+$menu-color:                        $gray;
+$menu-text-color:                   $black;
+
+//navigation colors
+$nav-color:                         $gray;
+$nav-button-color:                  $gray;
+$nav-text-color:                    $white;
+$nav-hover-color:                   $gray;

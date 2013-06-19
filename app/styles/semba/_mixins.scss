@@ -1,0 +1,8 @@
+/* Semba mixins*/
+
+@mixin menu-bar-button {
+  button{
+    height:                      $menu-button-height;
+    width:                       $menu-button-width;
+  }
+}

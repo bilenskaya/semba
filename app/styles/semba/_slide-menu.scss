@@ -1,0 +1,277 @@
+@import "semba/colors";
+@import "semba/units";
+
+.noscroll{
+	overflow:                      hidden;
+}
+
+//navigation 
+.nav {
+	z-index:                       $sliding-menu-z-index;
+	position:                      fixed;
+	margin:                        0;
+	top:                           0;
+	bottom:                        0;
+	overflow-x:                    hidden;
+	left:                          - $nav-width;
+	-webkit-transition-property:   left;
+  -moz-transition-property:      left;
+	-o-transition-property:        left;
+  transition-property:           left;
+	-webkit-transition-duration:   $nav-animation;
+	-moz-transition-duration:      $nav-animation;
+	-o-transition-duration:        $nav-animation;
+  transition-duration:           $nav-animation;
+	width:                         $nav-width;
+	background-color:              $nav-color;
+	color:                         $nav-text-color;
+	ul { 
+		width:                       inherit;
+		height:                      inherit;
+		margin:                      $base-unit-4 0 0 0;;
+		}
+	li {
+		padding:                     0;
+		margin:                      0;
+		margin-bottom:               $base-unit-2;
+		padding-left:                $base-unit;
+		padding-right:               $base-unit;
+		display:                     block;
+		height:                      $nav-item-height;
+		line-height:                 $nav-item-height;
+		list-style:                  none;
+		a {
+			position:                  relative;
+			height:                    $nav-item-height;
+			padding-left:              $base-unit;
+			padding-right:             $base-unit;
+			width:                     inherit;
+	    font-weight:               bold;
+	    display:                   block;
+	    text-decoration:           none;
+	    color:                     $nav-text-color;
+    }
+	}
+}
+
+.nav a:hover{
+  background-color:             $nav-hover-color;
+}
+
+.nav-button {
+		display:                    none;
+	  float:                      right;
+	  font-size:                  $nav-button-font-size;
+	  font-weight:                bold;
+		margin-right:               $margin;
+		border:                     0;
+    height:                     $nav-item-height;
+    background-color:           $nav-button-color;
+    color:                      $nav-text-color;
+    padding:                    0;
+}
+
+.nav img {
+	width:                        $nav-img-width;
+	height:                       $navimg-height;
+	margin-right:                 $margin;
+}
+
+//animate nav
+.navOpen {
+	left:                         0;
+}
+
+
+@media (max-width: 980px){
+	.menuBarFixed {
+		position:                   fixed;
+		width:                      100%;
+	}
+}
+
+//view ============================================
+.view {
+	position:                     absolute;
+	overflow:                     auto;
+	top:                          $menu-bar-height;
+	left:                         0;
+	-webkit-transition-property:  left;
+	-moz-transition-property:     left;
+	-o-transition-property:       left;
+	transition-property:          left;
+	-webkit-transition-duration:  $nav-animation;
+	-moz-transition-duration:     $nav-animation;
+	-o-transition-duration:       $nav-animation;
+  transition-duration:          $nav-animation;
+	bottom:                       0;
+	width:                        100%;
+}
+
+.viewCollapsed {
+	left:                         $nav-width;
+}
+
+//menu bar ============================================
+.menu-bar {
+	z-index:                      $sliding-menu-z-index;
+	top:                          0;
+	height:                       $menu-bar-height;
+	background:                   $menu-bar-color;
+	color:                        $menu-bar-text-color;
+	border:                       1px solid $menu-bar-border-color;
+	-webkit-transition-duration:  $menu-animation;
+  -moz-transition-duration:     $menu-animation;
+  -o-transition-duration:       $menu-animation;
+  transition-duration:          $menu-animation;
+}
+
+.menu-bar-fixed {
+	position:                     fixed;
+	width:                        100%;
+}
+
+.slide-menu-button {
+		border:                     0;
+		padding:                    0;
+    height:                     $menu-bar-height;
+    width:                      $menu-bar-height;
+    background-color:           $menu-bar-button-color;
+    color:                      $menu-bar-text-color;
+}
+
+.show-nav-button {
+  	margin-right:               $margin;
+	  float:                      left;
+	  font-size:                  $show-nav-button-font-size;
+	  border-right:               1px solid $menu-bar-border-color;
+	}
+
+.menu-bar-title {
+	white-space:                  nowrap;  
+	float:                        left;
+	font-weight:                  bold;
+	font-size:                    $menu-bar-title-font-size;
+	padding-top:                  $base-unit;
+	padding-:                     $base-unit-2;
+}
+
+//menu ===================================================
+
+.menu-button {
+	position:                     fixed;
+  right:                        0;
+  font-size:                    $show-nav-button-font-size;
+  border-left:                  1px solid $menu-bar-border-color;
+}
+
+.showMenuButton{
+    display:                     none;
+}
+
+.menu {
+	position:                     relative;
+	top:                          - ($menu-height + $menu-bar-height);
+	height:                       $menu-height;
+	padding:                      $padding;
+	color:                        $menu-text-color;
+	background:                   $menu-color;
+}
+
+//main content
+.main{
+	position:                     relative;
+	top:                          - ($menu-height + $menu-bar-height);
+ 	margin:                       $margin;
+ }
+
+//animate menu
+.showMenu{
+	top:                          0px;
+}
+
+.mainMenuOpen {
+	top:                          0px;
+}
+
+.menu, .main {
+	-webkit-transition-property:  top;
+-moz-transition-property:       top;
+-o-transition-property:         top;
+transition-property:            top;
+-webkit-transition-duration:    $menu-animation;
+-moz-transition-duration:       $menu-animation;
+-o-transition-duration:         $menu-animation;
+transition-duration:            $menu-animation;
+}
+
+
+
+//Portrait tablet to landscape and desktop ==================
+@media (min-width: 980px) {
+	.nav{
+		left:                        0;
+		width:                       $nav-980-width;
+		-webkit-transition-property: width;
+    -moz-transition-property:    width;
+	  -o-transition-property:      width;
+    transition-property:         width;
+  }
+	
+	.nav-button {
+		display:                    block;
+	}
+
+	.show-nav-button{
+		display:                    none;
+	}
+
+	.view{
+		left:                        $nav-980-width;
+		width:                       $view-980-width;
+		
+		overflow:                   auto;
+		
+	}
+
+	.nav ul {
+    width:                      100%;
+  }
+
+  .miniNav {
+  	width:                       $mini-nav-width;
+  	left:                        0;
+  	font-size:                   $nav-font-size;
+  	li{
+      height:                    $base-unit-7;
+  		a { 
+        height:                  $base-unit-7;
+			  font-weight:             normal;
+			  img{
+			  	vertical-align:        top;
+			  	margin:                0;
+			  }
+  		}
+  	}
+  }
+
+  .miniNavView{
+  	left:                        $mini-nav-width;
+  	width:                       100%;
+  }
+
+  .menuBarFixed {
+  	top:                         0;
+		position:                    fixed;
+		width:                       100%;
+	}
+	
+	.miniNavMenuBar {            
+		left:                        $nav-980-width;
+	}
+	.menu-bar-title {
+		margin-left:                 $margin;
+		margin-right:                $margin;
+		float:                       left;
+	}
+}
