@@ -6,3 +6,7 @@
     width:                       $menu-button-width;
   }
 }
+
+@mixin no-scroll {
+	overflow:                          hidden;
+}

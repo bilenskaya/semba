@@ -20,7 +20,7 @@ body {
 
 //stop body from scrolling
 .noscroll{
-  overflow:                          hidden;
+  @include no-scroll;
 }
 
 /* container ========================================================== */
@@ -168,6 +168,7 @@ body {
 
 //view animation 
 .navVisableAnimation {
+  @include no-scroll;
   left:                      $navigation-width;
   
   //container phone landscape break point
