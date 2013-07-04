@@ -1,0 +1,72 @@
+//navigation
+//sub menus
+//verical menus
+//horizontal menus
+//pagination
+//pills
+//tabs
+
+
+@mixin nav-button-base {
+	a {
+		@include button;
+		border:                            0;
+		background-color:                  $background-color;
+		padding:                           $button-padding;
+		font-weight:                       normal;
+		margin:                            0;
+		border:                            1px solid transparent;
+		border-bottom:                     1px solid $gray-light;
+	  &:active{
+	  	background-color:                $gray-light;
+	  	border-top:                      1px solid $gray-light;
+	  	border-left:                     1px solid $gray-light;
+	  	border-right:                    1px solid $gray-light;
+	  	border-bottom:                   1px solid transparent;
+	  }
+	}
+}
+
+@mixin nav{
+	@include nav-button-base;
+	border-bottom:                       1px solid $gray-light;
+}
+
+@mixin nav-stacked {
+	 border:                             1px solid $gray-light;
+	 @include nav-button-base;
+	 a {
+	  display:                           block;
+	  width:                             100%;
+	  text-align:                        left;
+	  &:active{
+	  	border:                          1px solid transparent;
+	  }
+	  &:last-child {
+		  border-bottom:                   0;
+	  }
+	}
+}
+
+@mixin nav-pill-base {
+	a {
+		border:                             1px solid $gray-light;
+		padding:                            $button-padding $padding-1t;
+	  @include border-radius($pill);
+	  &:link {
+	  	border:                           0;
+	  }
+	}
+}
+
+@mixin nav-pill {
+	@include nav;
+	border:                               0;
+	@include nav-pill-base;
+}
+
+@mixin nav-pill-stacked {
+	@include nav-stacked;
+	border:                               0;
+	@include nav-pill-base;
+}

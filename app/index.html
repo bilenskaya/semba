@@ -24,29 +24,116 @@
       <script src="components/json3/lib/json3.min.js"></script>
     <![endif]-->
     
+
+
+
     <!-- Add your site or application content here -->
-      <sliding-menu class="container" title="Sliding Menu Layout" menu="true" fixed="true">
+      <sliding-menu class="container" menu="true" fixed="true">
         <navigation>
-        <ul ng-controller="MainCtrl">
-          <li  data-ng-repeat="thing in awesomeThings">
-            <a href="#" data-ng-click="devices(thing[2])" >
-              <div class="devices">
-                <i data-ng-bind="thing[1]"></i>
-              </div>
-              <div>
-              <span data-ng-cloak data-ng-bind="thing[0]"></span>
-            </a>
-          </li>
-        </ul>
+          <a href="/">Home</a></dt>
+          <dl>
+
+            <dt><a href="/grid">Grid</a></dt>
+
+            <dt><a href="/typography">Typography</a></dt>
+              <dd><a href="/typography/#headings">Headings</a></dd>
+              <dd><a href="#">Font Family</a></dd>
+              <dd><a href="#">Text Sizes</a></dd>
+              <dd><a href="#">Body text</a></dd>
+              <dd><a href="#">Hypertext</a></dd>
+              <dd><a href="#">Abbreviations</a></dd>
+              <dd><a href="#">Preserve text</a></dd>
+              <dd><a href="#">Lists</a></dd>
+              <dd><a href="#">Blockquotes</a></dd>
+              <dd><a href="#">Pull quotes</a></dd>
+              <dd><a href="#">Figures</a></dd>
+              <dd><a href="#">Labels</a></dd>
+              <dd><a href="#">Address</a></dd>
+              <dd><a href="#">Stats tabs</a></dd>
+
+            <dt><a href="/code">Code</a></dt>
+              <dd><a href="#">Code inline</a></dd>
+              <dd><a href="#">Code block</a></dd>
+
+            <dt><a href="/buttons">Buttons</a></dt>
+              <dd><a href="/buttons/#styles">Buttons styles</a></dd>
+              <dd><a href="/buttons/#sizes">Buttons sizes</a></dd>
+              <dd><a href="/buttons/#color">Buttons colors</a></dd>
+
+            <dt><a href="/button-groups">Button Groups</a></dt>
+              <dd><a href="#">Horizontal group</a></dd>
+              <dd><a href="#">Vertical group</a></dd>
+              <dd><a href="#">Inline group</a></dd>
+              <dd><a href="#">Tabbed group</a></dd>
+              <dd><a href="#">Pagination</a></dd>
+            <dt><a href="/tables">Tables</a></dt>
+
+            <dt><a href="/forms">Forms</a></dt>
+              <dd><a href="#">Basic form</a></dd>
+              <dd><a href="/forms/#elements">Horizontal form</a></dd>
+              <dd><a href="#">Inline form</a></dd>
+              <dd><a href="#">Search form</a></dd>
+              <dd><a href="#">Login form</a></dd>
+              <dd><a href="#">Validation</a></dd>
+              <dd><a href="#">Inline editing</a></dd>
+              <dd><a href="#">Date picker</a></dd>
+              <dd><a href="#">Color picker</a></dd>
+              <dd><a href="#">Time picker</a></dd>
+              <dd><a href="#">File upload</a></dd>
+              <dd><a href="#">Stage</a></dd>
+            <dt><a href="#">Media</a></dt>
+              <dd><a href="#">Images</a></dd>
+              <dd><a href="#">Thumbnails</a></dd>
+              <dd><a href="#">Media objects</a></dd>
+
+            <dt><a href="/panels">Panels</a></dt>
+              <dd><a href="/panels/#panel">Panel</a></dd>
+              <dd><a href="/panels/#well">Well</a></dd>
+              <dd><a href="/panels/#Alers">Alerts</a></dd>
+
+            <dt><a href="/navigation">Navigation</a></dt>
+              <dd><a href="/navigation">Navigation</a></dd>
+              <dd><a href="/navigation/#tabbed">Navigation tabbed</a></dd>
+              <dd><a href="/navigation/#pill">Navigation pill</a></dd>
+              <dd><a href="/navigation/#stacked">Navigation stacked</a></dd>
+              <dd><a href="/navigation/#bar">Navigation bar</a></dd>
+              <dd><a href="#">Menu</a></dd>
+              <dd><a href="#">Sub menu</a></dd>
+              <dd><a href="/navigation/#bar">Breadcrumbs</a></dd>
+              <dd><a href="/navigation/#bar">Footer</a></dd>
+            <dt><a href="/tabs">Tabs</a></dt>
+              <dd><a href="#">Top tabs</a></dd>
+              <dd><a href="#">Bottom tabs</a></dd>
+              <dd><a href="#">Left Tabs</a></dd>
+              <dd><a href="#">Right Tabs</a></dd>
+            <dt><a href="#">Srollspy</a></dt>
+            <dt><a href="#">Popup</a></dt>
+            <dt><a href="#">Tooltip</a></dt>
+            <dt><a href="#">Modal</a></dt>
+            <dt><a href="#">Progress Bars</a></dt>
+            <dt><a href="#">Accordian</a></dt>
+            <dt><a href="#">Infite scrol</a></dt>
+            <dt><a href="#">Parallax ccrolling</a></dt>
+            <dt><a href="#">Typeahead</a></dt>
+            <dt><a href="#">Carousel</a></dt>
+            <dt><a href="#">Calandar</a></dt>
+            <dt><a href="#">Animation</a></dt>
+            <dt><a href="#">Utilities</a></dt>
+            <dt><a href="#">Font Awesome</a></dt>
+            <dt><a href="#">Sass Varibles</a></dt>
+            <dt><a href="#"></a></dt>
+            <dt><a href="#"></a></dt>
+          </dl>
        </navigation>
        <menu>
-        HEllO menu
+        
        </menu>
       </sliding-menu>
-    <!-- <div class="container">
-      <div class="cell1">cell1</div>
-      <div class="cell2">cell2</div>
-    </div> -->
+
+
+
+
+
 
     <script src="components/angular/angular.js"></script>
     <script src="components/angular-resource/angular-resource.js"></script>
@@ -57,6 +144,9 @@
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/directives/slide-menu.js"></script>
+    <script src="scripts/directives/tabs.js"></script>
+    <script src="scripts/directives/sbTabs.js"></script>
+    <script src="scripts/directives/labelPanel.js"></script>
     <!-- endbuild -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

@@ -1,12 +1,39 @@
 /* Semba mixins*/
+@import "semba/variables";
 
 @mixin menu-bar-button {
   button{
-    height:                      $menu-button-height;
-    width:                       $menu-button-width;
+    height:                         $menu-button-height;
+    width:                          $menu-button-width;
   }
 }
 
 @mixin no-scroll {
 	overflow:                          hidden;
 }
+
+@mixin no-appearance{
+	-moz-appearance:                   none;
+  -webkit-appearance:                none;
+	appearance:                        none;
+}
+
+
+@mixin word-wrap {
+	white-space: pre;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap:break-word;
+  overflow-wrap:break-word;
+}
+
+
+@mixin calc($property, $expression) { 
+  #{$property}: -moz-calc(#{$expression}); 
+  #{$property}: -o-calc(#{$expression}); 
+  #{$property}: -webkit-calc(#{$expression}); 
+  #{$property}: calc(#{$expression}); 
+} 
+
+

@@ -1,0 +1,240 @@
+/* Typography ======================================================================================*/
+
+//defaults
+body, p {
+	font-size:                         $base-font-size;
+	color:                             $gray-dark;
+  line-height:                       $line-height;
+  @include hyphens(auto);
+}
+
+//Headings
+h1, h2, h3, h4, h5, h5, h6 {
+	font-weight:                       bold;
+}
+@mixin mh1 {
+  font-size:                         $unit-8;
+}
+
+@mixin mh2 {
+  font-size:                         $unit-7;
+}
+
+h1 {
+  font-size:                         $unit-6;
+}
+h2 {
+  font-size:                         $unit-5;
+}
+h3 {
+  font-size:                         $unit-4;
+}
+h4 {
+  font-size:                         $unit-3;
+}
+h5 {
+  font-size:                         $unit-2;
+}
+h6 {
+  font-size:                         $unit-1;
+}
+
+
+//sub headings
+@mixin sub-heading {
+  font-weight:                       bold;
+  color:                             $gray-light;
+}
+
+@mixin smh1 {
+  @include sub-heading;
+  font-size:                         $unit-3 + $unit-2;
+}
+
+@mixin smh2 {
+  @include sub-heading;
+  font-size:                         $unit-2 + $unit-2;
+}
+
+
+@mixin sh1 {
+  @include sub-heading;
+  font-size:                         $unit-1 + $unit-1;
+}
+
+@mixin sh2 {
+  @include sub-heading;
+  font-size:                         $unit-01 + $unit-01;
+}
+
+@mixin sh3 {
+  @include sub-heading;
+  font-size:                         $unit-02 + $unit-02;
+}
+
+@mixin sh4 {
+  @include sub-heading;
+  font-size:                         $unit-03 + $unit-03;
+}
+
+@mixin sh5 {
+  @include sub-heading;
+  font-size:                         $unit-04 + $unit-04;
+}
+
+@mixin sh6 {
+  @include sub-heading;
+  font-size:                         $unit-05 + $unit-05;
+}
+
+//indent
+p {
+  margin: 0 0 $indent;
+  & + p {
+    text-indent: $indent;
+    margin-top: -$indent;
+  }
+}
+
+//bold text
+strong{
+	font-weight:                       bold;
+}
+
+//italic text
+em {
+  font-style:                        italic;
+}
+
+//samll text
+small {
+  font-size:                         $small-text;
+}
+
+//hyphens
+@mixin hyphens($val) {
+  -webkit-hyphens:                   $val;
+  -moz-hyphens:                      $val;
+  -ms-hyphens:                       $val;
+  -o-hyphens:                        $val; 
+  hyphens:                           $val; 
+}
+
+abbr, acronym, blockquote, code, dir, kbd, listing, plaintext,
+q, samp, tt, var, xmp {
+  @include hyphens(none);
+}
+
+
+//links
+@mixin link {
+  font-weight:                       bold;
+  text-decoration:                   none;
+  &:link { 
+    color:                           $link-color;
+    border-bottom:                   2px solid $link-color;
+  }
+  &:visited {
+    color:                           $link-visited-color;
+    border-bottom:                   2px solid $link-visited-color;
+  }
+  &:hover, &:focus {
+    color:                           $link-hover-color;
+    background-color:                $link-hover-background-color;
+    border-bottom:                   2px solid $link-hover-color;
+  }
+  &:active{
+    color:                           $link-active-color;
+    border-bottom:                   2px solid $link-active-color;
+    background-color:                $background-color;
+  }
+}
+
+
+//abbreviation
+abbr {
+  cursor:                            help;
+  border-bottom:                     1px dotted $text-color;
+}
+
+//Quotes
+@mixin block-quote {
+  padding:                           0;
+  margin:                            0;
+  blockquote {
+    margin:                            0 $quote-indent;
+  }
+  blockquote, blockquote > p {
+  font-style:                        italic;
+  font-size:                         $quote-font-size;
+  }
+  figcaption {
+    display:                       block;
+    font-size:                     $figcaption-font-size;
+    text-align:                    right;
+    &:before {
+      content:                     "\&mdash";
+    }
+  }
+}
+
+//lists
+ul, ol {
+  margin-left:                       $list-margin;
+}
+
+dt {
+  font-weight:                       bold;
+}
+
+dd {
+  margin-left:                       $margin;
+}
+
+@mixin unstyled-list {
+  list-style-type:                   none;
+  margin:                            0;
+}
+
+@mixin inline-list {
+  margin:                            0;
+  li {
+    display:                         inline;
+    margin-right:                    $margin-1t;
+  }
+}
+
+@mixin description-inline {
+  dt{
+    float:                           left;
+  }
+}
+
+@mixin description-ordered {
+  dt {
+      display: inline;
+      counter-reset: definitions;
+    }
+    dd {
+      display: block;
+      counter-increment: definitions;
+      &:before {
+        content: counter(definitions, decimal) ". ";
+      }
+    }
+}
+
+@mixin description-numbered {
+  counter-reset: definitions;
+  dt {
+    display: inline;
+    counter-increment: definitions;
+    &:before {
+      content: counter(definitions, decimal) ". ";
+    }
+  }
+}
+
+
+
+

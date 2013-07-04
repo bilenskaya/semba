@@ -1,0 +1,26 @@
+/* Tabs ======================================================================================*/
+
+@mixin tabs {
+	@include button-group;
+	button, a {
+		&:link, &:visited{
+		  border:                          0;
+	  }
+	}
+	 &:first-child {
+		border-left:                     0;
+	}
+}
+
+@mixin tab-pane {
+	display:                             block;
+	position:                            relative;
+	height:                              100%;
+}
+.tabs {
+	@include tabs;
+}
+
+.tab-pane {
+	height: 100px
+}

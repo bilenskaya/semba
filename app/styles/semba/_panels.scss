@@ -1,0 +1,61 @@
+/* Alerts*/
+
+@mixin panel {
+	display:                           block;
+	border:                            1px solid $panel-border-color;
+	padding:                           $padding;
+	margin-bottom:                     $panel-margin;
+}
+
+
+@mixin well {
+	@include panel;
+	margin:                            $margin;
+	background-color:                  $well-color;
+}
+
+@mixin alert-base {
+  padding:                           $unit-07 $padding;
+}
+
+@mixin alert-info {
+	@include panel;
+	@include alert-base;
+	border:                           1px solid $alert-border-info-color;
+	background-color:                       $alert-info-color;
+	color:                            $alert-text-info-color;
+}
+
+@mixin alert-success {
+	@include panel;
+	@include alert-base;
+	border:                           1px solid $alert-border-success-color;
+	background-color:                       $alert-success-color;
+	color:                            $alert-text-success-color;
+}
+
+@mixin alert-danger {
+	@include panel;
+	@include alert-base;
+	background-color:                       $alert-danger-color;
+	border:                           1px solid $alert-border-danger-color;
+	color:                            $alert-text-danger-color;
+}
+
+@mixin alert-warning {
+	@include panel;
+	@include alert-base;
+	border:                           1px solid $alert-border-warning-color;
+	background-color:                       $alert-warning-color;
+	color:                            $alert-text-warning-color;
+}
+
+.label-panel {
+	> label {
+		@include label;
+    padding:                      $unit-06 $unit-07;
+	}
+	> div {
+		@include panel;
+	}
+}

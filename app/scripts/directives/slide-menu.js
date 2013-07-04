@@ -6,12 +6,6 @@ angular.module('sembaApp')
       restrict: 'E',
       replace: true,
       transclude: true,
-      scope: {
-        title:  '@title',
-        miniNav: '@miniNav',
-        fixed:   '@fixed',
-        menu:    '@menu'
-      },
       template: '<div>' +
                   '<header class="menu-bar"  data-ng-class="{navVisableAnimation: expandNav}">' +
 
@@ -31,15 +25,8 @@ angular.module('sembaApp')
                   '</header>' +
 
                   '<div class="view" data-ng-class="{navVisableAnimation: expandNav}">' +
-
-						        '<div>' +
-                      '<div>' +
-                      '</div>' +
-
-                      '<article class="content" data-ng-view data-ng-class="{showMenuAnimation: menuOpen}">' +
-                      '</article>' +
-                    '</div>' +
-
+                    '<article class="content" data-ng-view data-ng-class="{showMenuAnimation: menuOpen}">' +
+                    '</article>' +
                   '</div>' +
 
                   '<div data-ng-transclude>' +
@@ -51,7 +38,8 @@ angular.module('sembaApp')
         $scope.miniNav = false;
         $scope.miniNavOpen = false;
         $scope.menu = false;
-        $scope.menuOpen = false;
+        
+        this.menuOpen = false;
 
         $scope.toggleNav = function() {
           $scope.expandNav = !$scope.expandNav;
@@ -62,7 +50,7 @@ angular.module('sembaApp')
           $scope.miniNavOpen = !$scope.miniNavOpen;
         };
         $scope.toggleMenu = function() {
-          $scope.menuOpen = !$scope.menuOpen;
+          this.menuOpen = !this.menuOpen;
         };
       },
     };
@@ -75,7 +63,6 @@ angular.module('sembaApp')
       replace: true,
       transclude: true,
       require: '^?slidingMenu',
-      scope: {},
       template: '<div class="navigation" data-ng-transclude>' +
                     '<button class="toggle-mini-navigation-button" data-ng-click="toggleMiniNav()" data-ng-switch on="miniNav">' +
                       '<i class="icon-angle-right" data-ng-switch-when="true"></i>' +
@@ -93,10 +80,13 @@ angular.module('sembaApp')
       replace: true,
       transclude: true,
       require: '^?slidingMenu',
-      scope: {},
       template: '<div class="menu" data-ng-class="{menuVisibleAnimation: menuOpen}" data-ng-transclude>' +
                   '<h2>My Menu</h2>' +
                 '</div>',
-      link: function postLink(scope, element, attrs) { }
+
+      link: function postLink(scope, element, attrs, slidingMenuCtrl) {
+        var menuOpen = slidingMenuCtrl.menuOpen;
+        console.log(menuOpen);
+      }
     };
   });

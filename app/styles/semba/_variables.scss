@@ -1,105 +1,280 @@
 @import "susy";
 
-/* Units /* Colors ======================================================================================*/
+//font face
+$base-font-size:                                      18px;
+$font-family-sans:                                    "Helvetica";
+$font-family-code:                                    Monaco, Menlo, Consolas, "Courier New", monospace;
 
-/* $base-font-size:                 default fon size
-*  $total-columns:                  default number of columns for (mobile phones)
-*  $column-width:                   width of each column
-*  $gutter-width:                   space between columns
-*  $grid-padding:                   space on the right and left of the grid
+/* Units ======================================================================================*/
+
+/* modular unitscale
+*  px ideal text size (body text):                    18 
+*  px important number (h1):                          60
+*  url:                                               http://modularscale.com/scale/?px1=18&px2=60&ra1=1.618&ra2=0
 */
-$base-font-size:                    10px;
-$total-columns:                     4;
-$column-width:                      3rem;
-$gutter-width:                      2rem;
-$grid-padding:                      $gutter-width;
+$unit-18:                                             59.807rem;  //1076.517px
+$unit-17:                                             46.971rem;  //845.479px
+$unit-16:                                             36.963rem;  //665.338px
+$unit-15:                                             29.030rem;  //522.546px
+$unit-14:                                             22.845rem;  //411.21px
+$unit-13:                                             17.942rem;  //322.958px
+$unit-12:                                             14.119rem;  //254.147px
+$unit-11:                                             11.089rem;  //199.603px
+$unit-10:                                             8.726rem;  //157.075px
+$unit-9:                                              6.854rem;  //123.364px
+$unit-8:                                              5.393rem;  //97.08px
+$unit-7:                                              4.236rem;  //76.245px
+$unit-6:                                              3.333rem;  //60px  Important number
+$unit-5:                                              2.618rem;  //47.123px
+$unit-4:                                              2.060rem;  //37.083px
+$unit-3:                                              1.618rem;  //29.124px
+$unit-2:                                              1.273rem;  //22.919px
+$unit-1:                                              1rem;      //18px  Ideal text size 
+$unit-01:                                             0.787rem;  //14.165px
+$unit-02:                                             0.618rem;  //11.125px
+$unit-03:                                             0.486rem;  //8.755px
+$unit-04:                                             0.382rem;  //6.876px
+$unit-05:                                             0.301rem;  //5.411px
+$unit-06:                                             0.236rem;  //4.25px
+$unit-07:                                             0.186rem;  //3.344px
+$unit-08:                                             0.146rem;  //2.627px
+$unit-09:                                             0.115rem;  //2.067px
+$unit-010:                                            0.090rem;  //1.624px
+$unit-011:                                            0.071rem;  //1.278px
+$unit-012:                                            0.056rem;  //1.004px
 
-$base-unit:                         $base-font-size;
-$margin:                            $gutter-width;
-$padding:                           $gutter-width;
-$margin-1t:                         $margin / 3;  
-$margin-2t:                         $margin-1t * 2;
-$padding-1t:                        $margin-1t;
-$padding-2t:                        $margin-2t;
+/* Grid  ======================================================================================*/
+$total-columns:                                       4;
+$column-width:                                        3rem; //////////////////////////
+$gutter-width:                                        $unit-1;
+$grid-padding:                                        $gutter-width;
 
-/* $phone-landscape:                alternative layout breakpoints for mobile phones with orientation landscape
-*  $tablet-portrait:                alternative layout breakpoints for tablets with orientation portrait
-*  $tablet-landscape:               alternative layout breakpoints for tablets with orientation landscape
-*  $desktop:                        alternative layout breakpoints for desktops
+$base-unit:                                           $base-font-size;
+$margin:                                              $gutter-width;
+$padding:                                             $gutter-width;
+$margin-1t:                                           $unit-03;  
+$margin-2t:                                           $unit-02;
+$padding-1t:                                          $margin-1t;
+$padding-2t:                                          $margin-2t;
+
+/* $phone-landscape:                                  alternative layout breakpoints for mobile phones with orientation landscape
+*  $tablet-portrait:                                  alternative layout breakpoints for tablets with orientation portrait
+*  $tablet-landscape:                                 alternative layout breakpoints for tablets with orientation landscape
+*  $desktop:                                          alternative layout breakpoints for desktops
 */
-$phone-landscape:                   32.5rem 4;
-$tablet-portrait:                   54rem 6;
-$tablet-landscape: 	                81rem 8;
-$desktop:                           128.5rem 12;
+$phone-landscape:                                     32.5rem 4; //////////////////////////
+$tablet-portrait:                                     54.0rem 6; //////////////////////////
+$tablet-landscape: 	                                  81.0rem 8; //////////////////////////
+$desktop:                                             128.5rem 12; //////////////////////////
 
 //z-index units
-$menu-bar-z-index:                  99;
-$view-z-index:                      1;
-$menu-z-index:                      1;
-$content-z-index:                   1;
-$navigation-z-index:                0;
+$menu-bar-z-index:                                    99;
+$view-z-index:                                        1;
+$menu-z-index:                                        1;
+$content-z-index:                                     1;
+$navigation-z-index:                                  0;
 
 //container units
-$container-width:                   100%;
-$container-height:                  100%;
+$container-width:                                     100%;
+$container-height:                                    100%;
 
 //animation transition units
-$animation-transition:              0.5s;
-
-//meun bar units
-$menu-bar-height:                   6rem;
-$menu-bar-width:                    $container-width;
-$menu-button-height:                $menu-bar-height;
-$menu-button-width:                 $menu-bar-height;
-
-
-//menu units
-$menu-height:                       20rem;
-$menu-hidden:                       - ($menu-height + $menu-bar-height);
-$menu-width:                        100%;
-
-
-//navigation units
-$navigation-width:                  25.9rem;
-$navigation-width-phone-landscape:  30rem;
-$navigation-width-tablet-portrait:  42.9rem;
-$navigation-width-tablet-landscape: 33.4rem;
-$navigation-width-desktop:          42.2rem;
+$animation-transition:                                0.5s; 
 
 /* Colors ======================================================================================*/
 
-$primary-color:                     #ffb163;
-$primary-highlight-color:           #ff8a63;
-// $secondary-color:                #333;
-// $secondary-highlight-color:      #555;
-// $tertiary-higlight-color:        #ddd;
-// $tertiary-color:                 #eee;
+$accent-color1:                                       #06B000;
+$accent-color1-dark:                                  darken($accent-color1, 10%);
+$accent-color1-darker:                                darken($accent-color1, 20%);
+$accent-color1-light:                                 lighten($accent-color1,10%);
+$accent-color1-ligter:                                lighten($accent-color1,20%);
 
-// Grays
-$black:                             #000 !default;
-$gray-darker:                       #222 !default;
-$gray-dark:                         #333 !default;
-$gray:                              #555 !default;
-$gray-light:                        #999 !default;
-$gray-lighter:                      #eee !default;
-$white:                             #fff !default;
+$accent-color2:                                       #28D108;
+$accent-color2-dark:                                  darken($accent-color2, 10%);
+$accent-color2-darker:                                darken($accent-color2, 20%);
+$accent-color2-light:                                 lighten($accent-color2,10%);
+$accent-color2-ligter:                                lighten($accent-color2,20%);
+
+//grays
+$black:                                               #000 !default;
+$gray-darker:                                         #222 !default;
+$gray-dark:                                           #333 !default;
+$gray:                                                #555 !default;
+$gray-light:                                          #999 !default;
+$gray-lighter:                                        #eee !default;
+$white:                                               #fff !default;
+
+$primary-color:                                       #04c;
+$info-color:                                          #0f75da;
+$success-color:                                       #4a9b17;
+$warning-color:                                       #FF9C00;
+$danger-color:                                        #c91111;
+
+//color percentages
+$percent-10:                                          10%;
+$percent-20:                                          20%;
+$percent-30:                                          30%;
+$percent-40:                                          40%;
+$percent-50:                                          50%;
 
 
-//bacground colors
-$background-color:                  $gray-lighter;
+/* Typography  ======================================================================================*/
+
+//text
+$line-height:                                         1.618; 
+$indent:                                              $unit-2;
+$list-margin:                                         $unit-2;
+$text-color:                                          $gray-dark;
+$text-muted-color:                                    lighten($text-color, $percent-40);
+$small-text:                                          $unit-02;
+
+//quotes
+$quote-indent:                                        $unit-6;
+$quote-font-size:                                     $unit-2;
+$figcaption-font-size:                                $unit-01;
+
+
+//links
+$link-color:                                          $accent-color2;
+$link-active-color:                                   #0069d6;
+$link-visited-color:                                  $text-muted-color; ////////////////
+$link-hover-color:                                    $white;
+$link-hover-background-color:                         #0069d6;
+
+//labels
+$label-primary-background-color:                      $primary-color;
+$label-info-background-color:                         $info-color;
+$label-success-background-color:                      $success-color;
+$label-warning-background-color:                      $warning-color;
+$label-danger-background-color:                       $danger-color;
+$label-default-background-color:                      $gray-light;
+$label-primary-text-color:                            $white;
+$label-info-text-color:                               $white;
+$label-success-text-color:                            $white;
+$label-warning-text-color:                            $white;
+$label-danger-text-color:                             $white;
+$label-default-text-color:                            $white;
+
+
+//Navigaion  ======================================================================================*/
+
+//meun bar
+$menu-bar-height:                                     $unit-5;
+$menu-bar-width:                                      $container-width;
+$menu-button-height:                                  $menu-bar-height;
+$menu-button-width:                                   $menu-bar-height;
+
+
+//menu units
+$menu-height:                                         $unit-11;
+$menu-hidden:                                         - ($menu-height + $menu-bar-height);
+$menu-width:                                          100%;
+
+
+//navigation units
+$navigation-width:                                    25.9rem;
+$navigation-width-phone-landscape:                    30.0rem;
+$navigation-width-tablet-portrait:                    42.9rem;
+$navigation-width-tablet-landscape:                   33.4rem;
+$navigation-width-desktop:                            42.2rem;
+
+$nav-height:                                          $unit-1;
+$nav-item-padding:                                    1;
 
 //menu bar colors
-$menu-bar-color:                    $gray-dark;
-$menu-bar-border-color:             $gray-darker;
-$menu-bar-button-color:             $gray-dark;
-$menu-bar-text-color:               $white;
+$menu-bar-color:                                      $gray-dark;
+$menu-bar-border-color:                               $gray-darker;
+$menu-bar-button-color:                               $gray-dark;
+$menu-bar-text-color:                                 $white;
 
 //menu colors
-$menu-color:                        $gray;
-$menu-text-color:                   $black;
+$menu-color:                                          $gray;
+$menu-text-color:                                     $white;
+
+/* Colors ======================================================================================*/
+$accent-color1:                                        #06B000;
+$accent-color1-dark:                                   darken($accent-color1, 10%);
+$accent-color1-darker:                                 darken($accent-color1, 20%);
+$accent-color1-light:                                  lighten($accent-color1,10%);
+$accent-color1-ligter:                                 lighten($accent-color1,20%);
+
+$accent-color2:                                        #28D108;
+$accent-color2-dark:                                   darken($accent-color2, 10%);
+$accent-color2-darker:                                 darken($accent-color2, 20%);
+$accent-color2-light:                                  lighten($accent-color2,10%);
+$accent-color2-ligter:                                 lighten($accent-color2,20%);
+
+//grays
+$black:                                                #000 !default;
+$gray-darker:                                          #222 !default;
+$gray-dark:                                            #333 !default;
+$gray:                                                 #555 !default;
+$gray-light:                                           #999 !default;
+$gray-lighter:                                         #eee !default;
+$white:                                                #fff !default;
+
+$primary-color:                                        #04c;
+$info-color:                                           #0f75da;
+$success-color:                                        #4a9b17;
+$warning-color:                                        #FF9C00;
+$danger-color:                                         #c91111;
+
+$background-color:                                     $white;
+
+
+//code  ======================================================================================*/
+$code-backgroud-color:                                $white;
+$code-alternate-color:                                $gray-lighter;
+$code-border-color:                                   $gray-light;
+
+
+
+//buttons  ======================================================================================*/
+$button-color:                                        $gray-lighter;
+
+//button sizes
+$button-large:                                        $unit-2;
+$button:                                              $unit-1;
+$button-small:                                        $unit-02;
+$button-tiny:                                         $unit-03;
+$button-padding:                                      $unit-03 $unit-1;
+$button-line-height:                                  1;
+
+//botton styles
+$round:                                               100%;
+$rounded:                                             100%;
+$pill:                                                $unit-1; 
+$block:                                               100%;
+
 
 //navigation colors
-$nav-color:                         $gray;
-$nav-button-color:                  $gray;
-$nav-text-color:                    $white;
-$nav-hover-color:                   $gray;
+$nav-color:                                           $gray;
+$nav-button-color:                                    $gray;
+$nav-text-color:                                      $white;
+$nav-hover-color:                                     $gray;
+$nav-hover-text-color:                                $white;
+$nav-active-color:                                    $gray;
+$nav-active-text-color:                               $white;
+
+
+/* Panels  ======================================================================================*/
+
+//Panels
+$panel-border-color:                                   $gray-light;
+$panel-margin:                                         $margin;
+//well colors
+$well-color:                                           $gray-lighter;
+
+//alert colors
+$alert-info-color:                                     lighten($info-color, $percent-40);
+$alert-success-color:                                  lighten($success-color, $percent-40);
+$alert-danger-color:                                   lighten($danger-color, $percent-40);
+$alert-warning-color:                                  lighten($warning-color, $percent-40);
+$alert-text-info-color:                                darken($info-color, $percent-10);
+$alert-text-success-color:                             darken($success-color, $percent-10);
+$alert-text-danger-color:                              darken($danger-color, $percent-10);
+$alert-text-warning-color:                             darken($warning-color, $percent-10);
+$alert-border-info-color:                              $alert-text-info-color;
+$alert-border-success-color:                           $alert-text-success-color;
+$alert-border-danger-color:                            $alert-text-danger-color;
+$alert-border-warning-color:                           $alert-text-warning-color;

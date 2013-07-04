@@ -1,4 +1,416 @@
 @import "semba";
 
 
+//landing page
+.front-page, p {
+	//background-color:               #e8862a;
+	//color:                          $white;
+	.front-heading, .front-sub-heading, p {
+	  text-align:                       center;
+	}
+}
 
+.front-heading {
+  @include mh1;
+}
+
+.front-sub-heading {
+	@include smh1;
+}
+
+.page {
+	padding:                        $padding;
+}
+
+
+//group container
+.group {
+	@include panel;
+	margin-bottom:                  0;
+}
+
+.example-label {
+    @include label;
+    padding:                      $unit-06 $unit-07;
+}
+
+//typography
+.smh1 {
+  @include smh1;
+}
+
+.smh2 {
+  @include smh2;
+}
+
+.sh1 {
+  @include sh1;
+}
+
+
+.sh2 {
+  @include sh2;
+}
+
+.sh3 {
+  @include sh3;
+}
+
+.sh4 {
+  @include sh4;
+}
+
+.sh5 {
+  @include sh5;
+}
+
+.sh6 {
+  @include sh6;
+}
+
+//block quote
+.block-quote {
+  @include block-quote;
+}
+
+
+//code
+.code-tabs {
+	@include inline-list;
+}
+
+.code-example {
+	@include code-block;
+	margin-bottom:                   $unit-1;
+	border-top:                      0; 
+}
+
+//links
+.hypertext {
+	@include unstyled-list;
+}
+
+.normal{
+   &:link {
+    color:                           $link-color;
+    border-bottom:                   2px solid $link-color;
+  }
+  &:visited {
+    color:                           $link-color;
+    border-bottom:                   2px solid $link-color;
+  }
+  &:hover, &:focus {
+    color:                           $link-color;
+    border-bottom:                   2px solid $link-color;
+  }
+  &:active{
+    color:                           $link-color;
+    border-bottom:                   2px solid $link-color;
+  }
+}
+
+.visited{
+   &:link {
+    color:                           $link-visited-color;
+    border-bottom:                   2px solid $link-visited-color;
+  }
+  &:visited {
+    color:                           $link-visited-color;
+    border-bottom:                   2px solid $link-visited-color;
+  }
+  &:hover, &:focus {
+    color:                           $link-visited-color;
+    border-bottom:                   2px solid $link-visited-color;
+  }
+  &:active{
+    color:                           $link-visited-color;
+    border-bottom:                   2px solid $link-visited-color;
+  }
+}
+
+.hover {
+   &:link {
+    color:                           $link-hover-color;
+    background-color:                $link-hover-background-color;
+    border-bottom:                   2px solid $link-hover-color;
+  }
+  &:visited {
+    color:                           $link-hover-color;
+    background-color:                $link-hover-background-color;
+    border-bottom:                   2px solid $link-hover-color;
+  }
+  &:hover, &:focus {
+    color:                           $link-hover-color;
+    background-color:                $link-hover-background-color;
+    border-bottom:                   2px solid $link-hover-color;
+  }
+  &:active{
+    color:                           $link-hover-color;
+    background-color:                $link-hover-background-color;
+    border-bottom:                   2px solid $link-hover-color;
+  }
+}
+
+.active {
+   &:link {
+    color:                           $link-active-color;
+    border-bottom:                   2px solid $link-active-color;
+    background-color:                $background-color;
+  }
+  &:visited {
+    color:                           $link-active-color;
+    border-bottom:                   2px solid $link-active-color;
+    background-color:                $background-color;
+  }
+  &:hover, &:focus {
+    color:                           $link-active-color;
+    border-bottom:                   2px solid $link-active-color;
+    background-color:                $background-color;
+  }
+  &:active{
+    color:                           $link-active-color;
+    border-bottom:                   2px solid $link-active-color;
+    background-color:                $background-color;
+  }
+}
+
+//lists
+.unstyled-list {
+  @include unstyled-list;
+}
+
+.inline-list{
+	@include inline-list
+}
+
+.descrption-inline {
+  @include description-inline;
+}
+
+.descrption-ordered {
+	@include description-ordered;
+}
+
+.description-numbered {
+  @include description-numbered ;
+}
+
+//labels
+.labels {
+  margin:                             0;
+  li {
+    display:                          inline;
+  }
+}
+.label-primary {
+  @include label-primary;
+}
+
+.label-info {
+  @include label-info;
+}
+
+.label-success {
+  @include label-success;
+}
+
+.label-warning {
+  @include label-warning;
+}
+
+.label-danger {
+  @include label-danger;
+}
+
+//code
+.code-inline {
+	@include code-inline;
+}
+
+.code-block {
+	@include code-block;
+}
+
+
+
+
+//buttons
+.button-primary, .button-info, .button-success, .button-warning, .button-danger,
+.pill-button, {
+	width:                            $unit-10;
+}
+
+//buttons sizes
+.large-button {
+  @include button;
+	@include button-large;
+}
+
+.button {
+	@include button;
+}
+
+.small-button {
+  @include button;
+	@include button-small;
+}
+
+.tiny-button {
+	@include button-tiny;
+}
+
+//Button Styles
+.round-button {
+	@include button-round;
+	height:                           $unit-9;
+	width:                            $unit-9;
+}
+
+.pill-button{
+	@include button-pill;
+}
+
+.tab-button{
+	//@include button-tab;
+}
+
+.block-button{
+	@include button-block;
+}
+
+//button colors
+.button-primary {
+  @include button-primary;
+}
+
+.button-info {
+  @include button-info;
+}
+
+.button-success {
+  @include button-success;
+}
+
+.button-warning {
+  @include button-warning;
+}
+
+.button-danger {
+  @include button-danger;
+}
+
+//button groups
+.button-group {
+  @include button-group;
+}
+
+.button-group-vertical {
+  @include button-group-vertical;
+}
+
+.button-group-block {
+  @include button-group-block(4);
+}
+.button-group-tab {
+  @include tabs;
+   a {
+    &:first-child {
+      background-color:                $gray;
+      color:                           $white;
+    }
+  }
+}
+
+
+
+.button-group-paging {
+  @include button-group-paging;
+}
+
+//tables
+.table {
+	@include table;
+}
+
+
+// //forms
+// .form {
+// 	@include form;
+// }
+
+//panels
+.panel {
+  @include panel;
+}
+.well {
+	@include well;
+}
+
+.alert-info {
+  @include alert-info;
+}
+
+.alert-success {
+  @include alert-success;	
+}
+
+.alert-danger {
+  @include alert-danger;	
+}
+
+.alert-warning {
+	@include alert-warning ;
+}
+
+//navigation
+.nav {
+  @include nav;
+}
+
+.nav-stacked {
+  @include nav-stacked;
+  width:                               $unit-11;
+}
+
+.nav-pill {
+  @include nav-pill;
+}
+
+.nav-pill-stacked {
+  @include nav-pill-stacked;
+  width:                               $unit-11;
+}
+
+
+//tabels
+.table {
+  @include table; 
+}
+
+.table-bordered {
+  @include table;
+  @include table-bordered;  
+}
+
+.table-stripped {
+  @include table;
+  @include table-stripped;  
+}
+
+.table-hover {
+  @include table;
+  @include table-hover;  
+}
+
+.table-condensed {
+  @include table;
+  @include table-condensed;  
+}
+
+.table-combined {
+  @include table;
+  @include table-bordered;
+  @include table-stripped;
+  @include table-hover;
+  @include table-condensed;
+}

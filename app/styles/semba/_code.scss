@@ -1,0 +1,29 @@
+/* Code ======================================================================================*/
+@mixin code-base {
+	font-family:                      $font-family-code;
+	border:                           1px solid $code-border-color; 
+}
+
+
+@mixin code-inline {
+	@include code-base ;
+	display:                          inline;
+	background-color:                       $code-alternate-color;
+}
+
+@mixin code-block {
+	@include code-base;
+	@include word-wrap;
+	margin-bottom:                    $unit-2;
+	ol {
+    list-style:                     decimal;
+		li {
+			border-left:                  2px solid $code-border-color;
+			margin-left:                  $margin;
+			&:nth-child(odd) {
+        background-color:                 $code-alternate-color;
+			}
+		}
+	}
+
+}

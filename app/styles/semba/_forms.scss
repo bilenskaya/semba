@@ -1,0 +1,131 @@
+
+
+//labels
+label {
+	vertical-align:                    middle;
+}
+  
+@mixin label {
+  display:                         inline;
+  color:                           $label-default-text-color;
+  background-color:                $label-default-background-color;
+  padding:                         $unit-09 $unit-07;
+  font-weight:                     bold;
+  text-align:                      bottom;
+}
+
+@mixin label-primary {
+  @include label;
+  color:                           $label-primary-text-color;
+  background-color:                $label-primary-background-color;
+}
+
+@mixin label-info {
+  @include label;
+  color:                           $label-info-text-color;
+  background-color:                $label-info-background-color;
+}
+
+@mixin label-success {
+  @include label;
+  color:                           $label-success-text-color;
+  background-color:                $label-success-background-color;
+}
+
+@mixin label-warning {
+  @include label;
+  color:                           $label-warning-text-color;
+  background-color:                $label-warning-background-color;
+}
+
+@mixin label-danger {
+  @include label;
+  color:                           $label-danger-text-color;
+  background-color:                $label-danger-background-color;
+}
+
+//forms
+@mixin form {
+	font-size:                           $font-size2;
+  line-height:                         2rem;
+  
+  input, select, textarea  {
+  	margin-bottom:                     $margin-2t;
+  	background-color:                        $background-color;
+  	border:                            1px solid $gray-light;
+  }
+
+  
+
+
+
+	input[type="text"],
+	input[type="password"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="date"],
+	input[type="month"],
+	input[type="time"],
+	input[type="week"],
+	input[type="number"],
+	input[type="email"],
+	input[type="url"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="color"],
+	select,
+	textarea {
+		padding:                           $padding-1t;
+		@include no-appearance;
+		&:focus {
+			border-color:                    $accent-color1;
+			@include reset-focus;
+		}
+		&:hover {
+			border-color:                    $accent-color1-darker;
+		}
+  }
+
+  select {
+    @include button;
+  }
+
+  select, textarea {
+  	font-size:                         inherit;
+  	line-height:                       inherit;
+  }
+  
+  input[type="checkbox"], 
+  input[type="radio"] {
+	  @include no-appearance;
+	  width:                             $font-size2;
+	  height:                            $font-size2;
+	  margin-bottom:                     0;
+	  &:active {
+      border-color:                    $accent-color1;
+  	}
+	  &:hover {
+      border-color:                    $accent-color1-darker;
+  	}
+  	&:checked  {
+      background-color:                      $accent-color1;
+      &:after {
+      	font-family:                   FontAwesome;
+      	vertical-align:                middle;
+      	text-align:                    center;
+      }
+  	}
+	}
+
+	input[type="checkbox"]:checked:after {
+	 content:                            "\f00c";
+	}
+
+  input[type="radio"] {
+	  @include border-radius(100%);
+	  &:after {
+      content:                         "\f111";
+    }
+	}
+
+}

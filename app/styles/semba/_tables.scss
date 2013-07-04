@@ -1,0 +1,51 @@
+//table
+@mixin table {
+	border-collapse:                   collapse;
+  border-spacing:                    0;
+  width:                             100%;
+  td, th {
+		padding:                         $padding-1t;
+		vertical-align:                  bottom;
+	}
+	th{
+		font-weight:                     bold;
+		text-align:                      left;
+	}
+	tr {
+		line-height:                     2.5rem;
+	}
+	tbody td {
+		border-top:                      1px solid #ddd;
+		text-align:                      left;
+  }
+  button {
+    @include button-tiny;
+    font-size:                       1.5rem;
+    margin-left:                     0;
+  }
+}
+
+@mixin table-bordered {
+  border:                            1px solid #ddd;
+}
+
+@mixin table-stripped {
+  tr:nth-child(odd) {
+  	background-color:                      $gray-lighter;
+  }
+  thead tr:first-child {
+  	background-color:                      $background-color;
+  }
+}
+
+@mixin table-hover{
+	tbody tr:hover {
+		background-color:                      $gray-light;
+	}
+}
+
+@mixin table-condensed{
+	tr {
+	 line-height:                      1rem;
+	}
+}

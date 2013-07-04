@@ -1,0 +1,179 @@
+/* Buttons ======================================================================================*/
+
+//butoon styles
+@mixin button {
+	font-size:                         $button;
+  line-height:                       $button-line-height;
+	display:                           inline-block;
+	border:                            1px solid $gray-dark;
+	padding:                           $button-padding;
+	text-align:                        center;
+	vertical-align:                    middle;
+	cursor:                            pointer;
+	background-color:                  $button-color;
+	&:link {
+  	color:                           $text-color;
+  	text-decoration:                 none;
+  }
+  &:visited {
+  	color:                           $text-color;
+  	text-decoration:                 none;
+  }
+	&:hover {
+	  background-color:                $gray-light;
+	  color:                           $white;
+	  text-decoration:                 none;
+  }
+  &:active{
+  	background-color:                $gray;
+  	color:                           $white;
+  	text-decoration:                 none;
+  }
+}
+
+@mixin button-round {
+  @include button;
+  @include border-radius($round);
+}
+
+@mixin button-pill {
+  @include button;
+  @include border-radius($pill);
+}
+
+@mixin button-block{
+  @include button;
+  display:                           block;
+  width:                             $block;
+}
+
+//button sizes
+@mixin button-large {
+  font-size:                         $button-large;
+}
+
+@mixin button-small {
+  font-size:                         $button-small;
+}
+
+@mixin button-tiny {
+  font-size:                         $button-tiny;
+}
+
+
+
+
+@mixin button-primary {
+	background-color:                  $primary-color;
+	color:                             $white;
+	&:link {
+  	color:                           $white;
+  	text-decoration:                 none;
+  }
+  &:visited {
+  	color:                           $white;
+  	text-decoration:                 none;
+  }
+	&:hover {
+	  background-color:                darken($primary-color, $percent-10);
+	  color:                           $white;
+	  text-decoration:                 none;
+  }
+  &:active{
+  	background-color:                darken($primary-color, $percent-20);
+  	color:                           $white;
+  	text-decoration:                 none;
+  }
+}
+
+@mixin button-info {
+	background-color:                  $info-color;
+	color:                             $white;
+	&:link {
+  	color:                           $white;
+  	text-decoration:                 none;
+  }
+  &:visited {
+  	color:                           $white;
+  	text-decoration:                 none;
+  }
+	&:hover {
+	  background-color:                darken($info-color, $percent-10);
+	  color:                           $white;
+	  text-decoration:                 none;
+  }
+  &:active{
+  	background-color:                darken($info-color, $percent-20);
+  	color:                           $white;
+  	text-decoration:                 none;
+  }
+}
+
+@mixin button-success {
+	background-color:                  $success-color;
+	color:                             $white;
+	&:link {
+  	color:                           $white;
+  	text-decoration:                 none;
+  }
+  &:visited {
+  	color:                           $white;
+  	text-decoration:                 none;
+  }
+	&:hover {
+	  background-color:                darken($success-color, $percent-10);
+	  color:                           $white;
+	  text-decoration:                 none;
+  }
+  &:active{
+  	background-color:                darken($success-color, $percent-20);
+  	color:                           $white;
+  	text-decoration:                 none;
+  }
+}
+
+@mixin button-warning {
+	background-color:                  $warning-color;
+	color:                             $white;
+	&:link {
+  	color:                           $white;
+  	text-decoration:                 none;
+  }
+  &:visited {
+  	color:                           $white;
+  	text-decoration:                 none;
+  }
+	&:hover {
+	  background-color:                darken($warning-color, $percent-10);
+	  color:                           $white;
+	  text-decoration:                 none;
+  }
+  &:active{
+  	background-color:                darken($warning-color, $percent-20);
+  	color:                           $white;
+  	text-decoration:                 none;
+  }
+}
+
+@mixin button-danger {
+	background-color:                  $danger-color;
+	color:                             $white;
+	&:link {
+  	color:                           $white;
+  	text-decoration:                 none;
+  }
+  &:visited {
+  	color:                           $white;
+  	text-decoration:                 none;
+  }
+	&:hover {
+	  background-color:                darken($danger-color, $percent-10);
+	  color:                           $white;
+	  text-decoration:                 none;
+  }
+  &:active{
+  	background-color:                darken($danger-color, $percent-20);
+  	color:                           $white;
+  	text-decoration:                 none;
+  }
+}
